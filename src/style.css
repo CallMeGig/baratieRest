@@ -1,0 +1,30 @@
+/* margin reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+
+.navbar{
+    overflow: hidden;
+    background-color: #92B6AD;
+    position: fixed;
+    top: 32px;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnbox {
+    display: flex;
+    gap: 20px;
+    height: 32px;
+}
+
+.menubtn {
+    padding: 0 5px;
+}

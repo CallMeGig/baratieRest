@@ -1,12 +1,14 @@
+import baratieBanner from "./baratieBanner.png";
+import baratieAtSea from "./baratie-to-sea.jpg";
 
-
-function loadHomePage() {
+export default function loadHomePage() {
     const content = {
         welcomeText: "Welcome to the Baratie",
         descText: "The Ocean-Going Restaurant"
     }
 
     const contentBox = document.querySelector("#content");
+    contentBox.innerHTML="";
 
     // Left side of homepage
     const textBox = document.createElement("div");
@@ -15,7 +17,7 @@ function loadHomePage() {
     
     // LS logo image
     const img = document.createElement("img");
-    img.src = "./baratieBanner.png";
+    img.src = baratieBanner;
     img.classList.add("logoImg");
     textBox.classList.add("LSHomepage")
 
@@ -32,10 +34,10 @@ function loadHomePage() {
 
     const imagebox = document.createElement("div");
     const image = document.createElement("img");
-    image.src = "./baratie-to-sea.jpg";
+    image.src = baratieAtSea;
     imagebox.classList.add("imagebox");
     // imagebox.appendChild(image);
     contentBox.appendChild(imagebox);
 }
 
-loadHomePage()
+loadHomePage(); 

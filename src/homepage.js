@@ -9,6 +9,8 @@ export default function loadHomePage() {
 
     const contentBox = document.querySelector("#content");
     contentBox.innerHTML="";
+    const homepageDiv = document.createElement('div');
+    homepageDiv.classList.add("homepageDiv");
 
     // Left side of homepage
     const textBox = document.createElement("div");
@@ -28,7 +30,7 @@ export default function loadHomePage() {
     // textBox.appendChild(descEl);
     // textBox.appendChild(welcomeEl);
 
-    contentBox.appendChild(textBox);
+    homepageDiv.appendChild(textBox);
 
     // Right side of homepage
 
@@ -37,7 +39,8 @@ export default function loadHomePage() {
     image.src = baratieAtSea;
     imagebox.classList.add("imagebox");
     // imagebox.appendChild(image);
-    contentBox.appendChild(imagebox);
+    homepageDiv.appendChild(imagebox);
+    contentBox.append(homepageDiv);
 }
 
 loadHomePage(); 

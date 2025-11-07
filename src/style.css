@@ -16,8 +16,7 @@ body {
     border-top: #26302E solid 3px;
     border-bottom: #26302E solid 3px;
     background-color: #7EA399; 
-    /* border-top: 3px solid #26302E; */
-    /* border-bottom: 3px solid #26302E; */
+    box-shadow: 0px 10px #26302E55;
     position: fixed;
     top: 32px;
     height: 48px;
@@ -40,6 +39,7 @@ body {
 .logo > h1 {
     font-family: sans-serif;
     color: #26302E;
+    padding-left: 125px;
 }
 
 .btnbox {
@@ -98,8 +98,39 @@ body {
 
 /* ######################################################################### */
 
+.menuDiv {
+    padding-top: 100px;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    background-image: url('eric-gooch-art-nouveau-dining-car-eric-gooch.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.menuContentDiv {
+    background-color: #F2E3C3CC;
+    width: 70vw;
+    gap: 25px;
+    display: grid;
+    justify-items: center;
+}
+
+.menuH {
+
+    font-size: xx-large;
+    width: 85%;
+    margin-top: 50px;
+    background-color: #7EA399CC;
+    border: #26302E solid 3px;
+    text-align: center;
+    padding: 25px 0;
+}
+
 .menuItem{
     display: grid;
+    background-color: #F2E3C3FF;
+    opacity: 100%;
     grid-template-columns: 75px 75px 75px 25px;
     grid-template-rows: auto;
     gap: 15px 15px;
@@ -113,17 +144,24 @@ body {
 
 .menuSec {
     display: grid;
+    width: 100%;
+    padding-top: 25px;
+    justify-content: center;
     grid-template-columns: 310px 310px;
     grid-template-rows: auto;
-    grid-gap: 25px 15px;
+    grid-gap: 15px 15px;
 }
 
 .itemName{
     grid-area: IN;
+
+    font-size: large;
 }
 
 .itemPrice{
     grid-area: IP;
+
+    font-size: large;
 }
 
 .itemContent{

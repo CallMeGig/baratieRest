@@ -2,6 +2,7 @@ export default function menuLoad() {
     const contentDiv = document.querySelector("#content");
     contentDiv.innerHTML = '';
     const menuDiv = document.createElement('div');
+    const menuContentDiv = document.createElement('div');
     
     // object to hold all the pages information
     const page = {
@@ -38,10 +39,10 @@ export default function menuLoad() {
         ],       
     }
     
-    const menuSec1 = document.createElement('div');
-    const menuSec2 = document.createElement('div');
-    const menuSec3 = document.createElement('div');
-    const menuSec4 = document.createElement('div');
+    const menuSec1 = document.createElement('div'); // Appetizers
+    const menuSec2 = document.createElement('div'); // Main Course
+    const menuSec3 = document.createElement('div'); // Desserts
+    const menuSec4 = document.createElement('div'); // Drinks
     
     const menu1H = document.createElement('div');
     const menu2H = document.createElement('div');
@@ -53,14 +54,16 @@ export default function menuLoad() {
     menu3H.textContent = page.dessertH;
     menu4H.textContent = page.drinksH;
 
-    menuSec1.classList.add('menuSec');
-    menu1H.classList.add('menuH');
-    menuSec2.classList.add('menuSec');
-    menu2H.classList.add('menuH');
-    menuSec3.classList.add('menuSec');
-    menu3H.classList.add('menuH');
-    menuSec4.classList.add('menuSec');
-    menu4H.classList.add('menuH');
+    menuDiv.classList.add("menuDiv");
+    menuContentDiv.classList.add("menuContentDiv");
+    menuSec1.classList.add('menuSec', 'menuContent');
+    menu1H.classList.add('menuH', 'menuContent');
+    menuSec2.classList.add('menuSec', 'menuContent');
+    menu2H.classList.add('menuH', 'menuContent');
+    menuSec3.classList.add('menuSec', 'menuContent');
+    menu3H.classList.add('menuH', 'menuContent');
+    menuSec4.classList.add('menuSec', 'menuContent');
+    menu4H.classList.add('menuH', 'menuContent');
     
     
     for (let item in page.appetizerItems) {
@@ -79,14 +82,15 @@ export default function menuLoad() {
         addMenuItem(menuSec4, page.drinksItems[iteml]);
     };
 
-    menuDiv.appendChild(menu1H);
-    menuDiv.append(menuSec1);
-    menuDiv.appendChild(menu2H);
-    menuDiv.append(menuSec2);
-    menuDiv.appendChild(menu3H);
-    menuDiv.append(menuSec3);
-    menuDiv.appendChild(menu4H);
-    menuDiv.append(menuSec4);
+    menuContentDiv.appendChild(menu1H);
+    menuContentDiv.append(menuSec1);
+    menuContentDiv.appendChild(menu2H);
+    menuContentDiv.append(menuSec2);
+    menuContentDiv.appendChild(menu3H);
+    menuContentDiv.append(menuSec3);
+    menuContentDiv.appendChild(menu4H);
+    menuContentDiv.append(menuSec4);
+    menuDiv.append(menuContentDiv);
     contentDiv.append(menuDiv);
 
 

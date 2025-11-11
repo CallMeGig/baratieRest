@@ -26,6 +26,14 @@ body {
     align-items: center;
 }
 
+#footer {
+    background-color: #7EA399;
+    display: grid;
+    justify-content: center;
+    height: 35px;
+    align-content: center;
+}
+
 /* ######################################################################### */
 
 /* homepage  */
@@ -166,4 +174,47 @@ body {
 
 .itemContent{
     grid-area: IC;
+}
+
+/* ######################################################################### */
+
+/* contact  */
+
+/* ######################################################################### */
+
+.outerContact {
+    background-image: url(East_Blue_Infobox.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height:100vh;
+    padding-top: 100px;
+
+
+    justify-items: center;
+}
+
+.red {
+    background-color: #F2E3C3CC;
+    width: 70vw;
+    margin-top: 30px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    justify-content: center;
+    grid-template-areas: 'IS AC';
+}
+
+.imgSnail {
+    grid-area: 'IS';
+    height: 300px;
+    padding-left: 50px;
+}
+
+.ctaContainer {
+    grid-area: 'AC';
+    display: grid;
+    align-content: center;
+    text-align: end;
+    padding-right: 50px;
+
 }

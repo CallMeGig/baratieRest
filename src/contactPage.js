@@ -23,8 +23,6 @@ export default function loadContactPage() {
     const greenBox = document.createElement('div'); 
 
     ctaBox.classList.add('red');
-    blueBox.classList.add('blue');
-    greenBox.classList.add('green');
 
     const ctaImage = document.createElement('img');
     ctaImage.classList.add('imgSnail');
@@ -54,7 +52,4 @@ export default function loadContactPage() {
     ctaContainer.append(locationP);
     ctaBox.append(ctaContainer);
 
-    outerContainer.append(blueBox);
-    outerContainer.append(greenBox);
-    
 }
